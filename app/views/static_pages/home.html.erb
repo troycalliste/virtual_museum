@@ -1,0 +1,1149 @@
+<!-- just do the same thing on every other web page, with the according models -->
+
+<div id="homeNav" class="dropDown">
+  <div class="dropDown-about">
+    <div class="ddtext">
+    Welcome the virtual museum. Here you can take a look at some of the vestiges that helped shape our
+  world history.  Scroll below for more information about each artifact.
+   </div>
+  </div>
+  <div class="dropDown-content">
+    <a href="#">ABOUT</a>
+    <a href="#">SERVICES</a>
+    <a href="#">CLIENTS</a>
+    <a href="#">CONTACTS</a>
+  </div>
+</div>
+<div class="vmlogo">
+  VIRTUAL_MUSEUM
+</div>
+<div class="menubtn">
+<div id="sptop" class= "dotwrap">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+</div>
+
+<div class="contain">
+  <canvas id="romanCanvas"></canvas>
+  <canvas id="guanyinCanvas"></canvas>
+  <canvas id="caesarCanvas"></canvas>
+  <canvas id="tyrionCanvas"></canvas>
+</div>
+
+<div class="main">
+
+
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+   this is inner
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <button class="arrow left zeroL">
+  <svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+    <polyline fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+	45.63,75.8 0.375,38.087 45.63,0.375 "/>
+  </svg>
+</button>
+<button class="arrow right zeroR">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+    <polyline fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+	0.375,0.375 45.63,38.087 0.375,75.8 "/>
+  </svg>
+</button>
+
+
+<div class="screen">
+<!-- <div class="loader">
+   <div class="loader__bar"></div>
+   <div class="loader__bar"></div>
+   <div class="loader__bar"></div>
+   <div class="loader__bar"></div>
+   <div class="loader__bar"></div>
+   <div class="loader__ball"></div>
+   <span class="loading">loading...</span>
+ </div> -->
+ </div>
+</div>
+
+
+<div class="uppertop">
+
+  PICTURED ABOVE: A Roman man, thought have been member of the Licinian family from the 2nd century
+A.D. have been member of the Licinian family from the 2nd century A.D.
+<div class="uppertoptext">
+Beginning with the founding of the Italian city of Rome in the 8th century BC to the
+collapse of the Western Roman Empire in the 5th century AD, encompassing
+the Roman Kingdom (753 BC–509 BC), Roman Republic (509 BC–27 BC) and Roman Empire (27 BC–476 AD) until the fall of the western empire
+Beginning in the eighth century B.C., Ancient Rome grew from a small town
+on central Italy’s Tiber River into an empire that at its peak
+encompassed most of continental
+Europe, Britain, much of western Asia, northern Africa and the Mediterranean islands
+</div>
+<div class="upperTopPic1">
+   <img src="<%= image_url("fountain.jpg")%>">
+</div>
+<div class="upperTopPic2">
+  <img src="<%= image_url("helmet.jpg")%>">
+</div>
+</div>
+
+
+
+<div class="upperBig">
+  <span class="upperBigText">
+ The Romans built a huge empire and conquered new lands with their army, which could march up to 40km a day!
+    </span>
+
+</div>
+
+
+
+<div class="uppermid">
+
+
+  <div class="uppertext">
+  Rome was founded in 753BC by its first king, Romulus. It grew into a rich and powerful city during the next few hundred years. Roman legend
+  says that Romulus had a twin brother called Remus. As babies they were abandoned in the area which later became Rome. A she-wolf
+  found and raised them, but when they grew up, Romulus fought and  killed Remus and became the first ruler of Rome!
+ <br/>
+ <br/>
+
+  The Romans believed in gods and goddesses who ruled over different areas of life. For example, Neptune was the god of the ocean, and they prayed to him to protect them at sea. Temples were built to honour the gods, and people would visit them with offerings.
+  The Roman Empire expanded to become one of the largest empires in the ancient world, though still ruled from the city, with an estimated 50 to 90 million inhabitants (roughly 20% of the world's population at the time)
+  </div>
+  <div class="ucfirst">
+  </div>
+  <div class="uppercontent">
+
+ </div>
+</div>
+
+
+
+<div class="lowermid">
+  <div class="lowercontent">
+    <img class="romanGraphic" src="<%= image_url("coin.png")%>">
+
+  </div>
+  <span class="textlow">
+    The current population of the city of Rome is around 2.7 million.
+    </span>
+ <div class="lowerlink">
+ <a href="#" class="nextbtn">next<i class="fas fa-angle-double-right"></i></a>
+ </div>
+</div>
+
+</div>
+ <script>
+
+
+   var upmid = document.getElementsByClassName("uppermid")[0];
+    var upcont = document.getElementsByClassName("uppercontent")[0];
+     console.log(upmid.classList + " is the list bro");
+   var theTop = upmid.offsetTop;
+   var figHome = "http://localhost:3000/static_pages/home"
+   var fig1 = "http://localhost:3000/figures/1"
+   var fig3 = "http://localhost:3000/figures/3"
+   var fig4 = "http://localhost:3000/figures/4"
+   var menutoggled = false
+   console.log(theTop + "isthe top");
+
+window.onload = function(){
+
+  var toggled = false
+   var docbody = document.body,
+   dochtml = document.documentElement,
+   docheight = Math.max( docbody.scrollHeight, docbody.offsetHeight,
+                     dochtml.clientHeight, dochtml.scrollHeight, dochtml.offsetHeight );
+   window.addEventListener( 'resize', currentHeight, false);
+   function currentHeight() {
+     docbody = document.body;
+     dochtml = document.documentElement;
+
+     docheight = Math.max( docbody.scrollHeight, docbody.offsetHeight,
+                       dochtml.clientHeight, dochtml.scrollHeight, dochtml.offsetHeight );
+    theTop = upmid.offsetTop;
+}
+
+
+
+document.getElementsByClassName("menubtn")[0].addEventListener('click', openNav, false)
+
+function openNav() {
+  if (menutoggled == false) {
+document.getElementById("homeNav").style.height = "40%";
+  document.getElementsByClassName("dot")[0].style.backgroundColor = "red"
+  document.getElementsByClassName("dot")[1].style.backgroundColor = "red"
+  document.getElementsByClassName("dot")[2].style.backgroundColor = "red"
+
+menutoggled = true;
+} else if (menutoggled == true) {
+  document.getElementById("homeNav").style.height = "0%";
+  document.getElementsByClassName("dot")[0].style.backgroundColor = "#bbb"
+  document.getElementsByClassName("dot")[1].style.backgroundColor = "#bbb"
+  document.getElementsByClassName("dot")[2].style.backgroundColor = "#bbb"
+  menutoggled = false;
+}
+}
+
+
+
+
+
+
+
+document.addEventListener('scroll', topReached, false);
+function topReached() {
+  var scrllel = document.scrollingElement.scrollTop;
+  if (scrllel> (theTop)) {
+    console.log(window.innerHeight);
+     expandPic();
+     toggled = true;
+  } else {
+    smallPic();
+  }
+  var elmnt = document.scrollingElement;
+  var y = elmnt.scrollTop;
+ // document.getElementsByClassName("uppercontent")[0].innerHTML = "Vertically: " + y + "px";
+}
+
+function expandPic() {
+  var uc = document.getElementsByClassName("uppercontent")[0];
+  var ucshow = document.getElementsByClassName("uppercontentshow")[0];
+  if (document.URL.indexOf(fig1) == 0 && toggled == false) {
+
+
+   $(".uppercontent").addClass('transition').removeClass('uppercontent');
+    document.getElementsByClassName("transition")[0].style.backgroundImage = "url(/assets/tyrion2-05da91e0d494af50ad636b86030681fea11ef504c65be4a9e81d0e0d750ac854.jpg)"
+   console.log("happening right now");
+ } else if (document.URL.indexOf(fig3) == 0 && toggled == false) {
+
+  $(".uppercontent").addClass('transition').removeClass('uppercontent');
+   document.getElementsByClassName("transition")[0].style.backgroundImage = "url(/assets/guanyin3-7d59df6b66ac040cf9a47a6e1fc724e8215be8029f4f08b4ba269f0db102c662.jpg)"
+  console.log("happening right now");
+} else if (document.URL.indexOf(fig4) == 0 && toggled == false) {
+
+ $(".uppercontent").addClass('transition').removeClass('uppercontent');
+  document.getElementsByClassName("transition")[0].style.backgroundImage = "url(/assets/egypt3-97937480d898d4eeb5d4ba4707daefa9a076b0e679e793b4565f007ca7ff8fd9.jpg)"
+ console.log("happening right now");
+} else if (document.URL.indexOf(figHome) == 0 && toggled == false) {
+
+ $(".uppercontent").addClass('transition').removeClass('uppercontent');
+  document.getElementsByClassName("transition")[0].style.backgroundImage = "url(/assets/italy-3fc9d3ef5a46732423d1f431f72cc0ac2531f5b5eb5bae5afc181d51b04bdffd.jpg)"
+ console.log("happening right now");
+}
+  bottomReached();
+}
+
+function smallPic() {
+  var uc = document.getElementsByClassName("uppercontent")[0];
+
+  if ( toggled == true) {
+     $('.transition').addClass('uppercontent').removeClass('transition');
+   toggled = false;
+  }
+}
+
+ function bottomReached() {
+  var scrllel = document.scrollingElement.scrollTop;
+  uml = theTop + (window.innerHeight * .60)
+  if (scrllel > uml && document.URL.indexOf(fig1) == 0) {
+    var addOrRemove = true
+    $('.transition').addClass('uppermidlast').removeClass('transition');
+      document.getElementsByClassName("transition")[0].style.backgroundImage = "url(/assets/tyrion2-05da91e0d494af50ad636b86030681fea11ef504c65be4a9e81d0e0d750ac854.jpg)"
+} else if (scrllel > uml && document.URL.indexOf(fig3) == 0) {
+      $('.transition').addClass('uppermidlast').removeClass('transition');
+      document.getElementsByClassName("transition")[0].style.backgroundImage = "url(/assets/guanyin3-7d59df6b66ac040cf9a47a6e1fc724e8215be8029f4f08b4ba269f0db102c662.jpg)"
+    } else if (scrllel > uml && document.URL.indexOf(fig4) == 0) {
+           $('.transition').addClass('uppermidlast').removeClass('transition');
+           document.getElementsByClassName("transition")[0].style.backgroundImage = "url(/assets/egypt3-97937480d898d4eeb5d4ba4707daefa9a076b0e679e793b4565f007ca7ff8fd9.jpg)"
+         }else if (scrllel > uml && document.URL.indexOf(figHome) == 0) {
+                 $('.transition').addClass('uppermidlast').removeClass('transition');
+                 document.getElementsByClassName("transition")[0].style.backgroundImage = "url(/assets/italy-3fc9d3ef5a46732423d1f431f72cc0ac2531f5b5eb5bae5afc181d51b04bdffd.jpg)"
+                }
+
+    else if (scrllel < uml) {
+        $('.uppermidlast').addClass('transition').removeClass('uppermidlast');
+       }
+    }
+
+
+
+    function bgColors() {
+       topbg = document.getElementsByClassName('outer')[0];
+       uppertopbg = document.getElementsByClassName('uppertop')[0];
+       midtopbg = document.getElementsByClassName('upperBig')[0];
+       midlowbg = document.getElementsByClassName('uppermid')[0];
+       lowbg = document.getElementsByClassName('lowermid')[0];
+
+      if(document.URL.indexOf(fig1) > -1){
+        uppertopbg.style.backgroundImage = "linear-gradient(#DCDADA, #DDECFF)";
+        midtopbg.style.backgroundImage = "linear-gradient(#DDECFF, #A0C9FF)";
+        midlowbg.style.backgroundImage = "linear-gradient(#A0C9FF, #5790DA)";
+        lowbg.style.backgroundImage = "linear-gradient(#5790DA, #477ABC)";
+        console.log("bg colorssss")
+      }
+     else if(document.URL.indexOf(fig3) > -1){
+       uppertopbg.style.backgroundImage = "linear-gradient(#DCDADA, #AADBD8)";
+       midtopbg.style.backgroundImage = "linear-gradient(#AADBD8, #8ECFCB)";
+       midlowbg.style.backgroundImage = "linear-gradient(#8ECFCB, #67B2AE)";
+       lowbg.style.backgroundImage = "linear-gradient(#67B2AE, #43AFA9)";
+     }
+
+    else if(document.URL.indexOf(fig4) > -1){
+       uppertopbg.style.backgroundImage = "linear-gradient(#DCDADA, #E0CC9E)";
+       midtopbg.style.backgroundImage = "linear-gradient(#E0CC9E, #D2AD58)";
+       midlowbg.style.backgroundImage = "linear-gradient(#D2AD58, #CB9822)";
+       lowbg.style.backgroundImage = "linear-gradient(#CB9822, #CE9000)";
+     } else if(document.URL.indexOf(figHome) > -1){
+        uppertopbg.style.backgroundImage = "linear-gradient(#DCDADA, #866969)";
+        midtopbg.style.backgroundImage = "linear-gradient(#866969, #864C4C)";
+        midlowbg.style.backgroundImage = "linear-gradient(#864C4C, #7F2525)";
+        lowbg.style.backgroundImage = "linear-gradient(#7F2525, #5B2222)";
+      }
+   }
+
+
+      var renderer,
+        scene,
+        camera,
+
+        romanCanvas = document.getElementById('romanCanvas');
+        var renderer2,
+          scene2,
+          camera2,
+
+          tyrionCanvas = document.getElementById('tyrionCanvas');
+          var renderer3,
+            scene3,
+            camera3,
+
+          caesarCanvas = document.getElementById('caesarCanvas');
+
+          var renderer4,
+            scene4,
+            camera4,
+
+          guanyinCanvas = document.getElementById('guanyinCanvas');
+
+        var statsEnabled = true;
+
+                var directionalLight;
+                var mouseX = 0, mouseY = 0;
+                var targetX = 0, targetY = 0;
+                var windowHalfX = window.innerWidth / 2;
+                var windowHalfY = window.innerHeight / 2;
+                var smallWindow = window.innerWidth / 100;
+
+
+      //RENDERERS
+      renderer = new THREE.WebGLRenderer({
+        canvas: romanCanvas,
+        antialias: true,
+        alpha: true
+      });
+      renderer.setClearColor (0xffffff, 0);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(window.innerWidth, window.innerHeight );
+      renderer2 = new THREE.WebGLRenderer({
+        canvas: tyrionCanvas,
+        antialias: true,
+        alpha: true
+      });
+      renderer2.setClearColor (0xffffff, 1);
+      renderer2.setPixelRatio(window.devicePixelRatio);
+      renderer2.setSize(window.innerWidth, window.innerHeight );
+      renderer3 = new THREE.WebGLRenderer({
+        canvas: caesarCanvas,
+        antialias: true,
+        alpha: true
+      });
+      renderer3.setClearColor (0xffffff, 1);
+      renderer3.setPixelRatio(window.devicePixelRatio);
+      renderer3.setSize(window.innerWidth, window.innerHeight );
+      renderer4 = new THREE.WebGLRenderer({
+        canvas: guanyinCanvas,
+        antialias: true,
+        alpha: true
+      });
+      renderer4.setClearColor (0xffffff, 1);
+      renderer4.setPixelRatio(window.devicePixelRatio);
+      renderer4.setSize(window.innerWidth, window.innerHeight )
+
+
+      //CAMERA
+      camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+      camera.aspect = 2000 / 900;
+      camera2 = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+      camera2.aspect = 1000 / 500;
+      camera3 = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+      camera3.aspect = 1000 / 500;
+      camera4 = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+      camera4.aspect = 1000 / 500;
+      //SCENE
+      scene = new THREE.Scene();
+      scene2 = new THREE.Scene();
+      scene3 = new THREE.Scene();
+      scene4 = new THREE.Scene();
+
+
+      //LIGHTS
+      var light = new THREE.AmbientLight(0xffffff, 0.5);
+      scene.add(light);
+      var light2 = new THREE.PointLight(0xffffff, 1);
+      scene.add(light2);
+      var light3 = new THREE.AmbientLight(0xffffff, 0.5);
+      scene2.add(light3);
+      var light4 = new THREE.PointLight(0xffffff, 1);
+      scene2.add(light4);
+      var light5 = new THREE.AmbientLight(0xffffff, 0.5);
+      scene3.add(light5);
+      var light6 = new THREE.PointLight(0xffffff, 1);
+      scene3.add(light6);
+      var light7 = new THREE.AmbientLight(0xffffff, 0.5);
+      scene4.add(light7);
+      var light8 = new THREE.PointLight(0xffffff, 1);
+      scene4.add(light8);
+
+      var loader = new THREE.GLTFLoader();
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // loader.load('<%= asset_path 'romans.glb' %>', handle_load);
+      //                                           // loader.load('<%= asset_path 'tyrion.gltf' %>', second_load);
+      // loader.load('<%= asset_path 'tyrion.gltf' %>', fourth_load);
+      // loader.load('<%= asset_path 'model3/ramasses.gltf' %>', caesar_load);
+      // loader.load('<%= asset_path 'model4/guanyin.gltf' %>', guanyin_load);
+
+      var manager = new THREE.LoadingManager(manager),
+      mesh = 0,
+      mesh2 = 0,
+      mesh3 = 0,
+      mesh4 = 0,
+      mesh5 = 0;
+      document.addEventListener( 'mousemove', onDocumentMouseMove, false);
+
+
+
+       function handle_load(gltf) {
+          romanCanvas.style.left = "50%"
+          console.log(gltf);
+
+
+          mesh = gltf.scene;
+          console.log(mesh.children[0]);
+          mesh.children[0].material = new THREE.MeshLambertMaterial();
+
+          scene.add( mesh );
+          mesh.position.z = -18;
+          mesh.position.y = -1;
+
+          console.log(document.URL);
+
+
+
+
+      }
+     //  function second_load(gltf) {
+     //
+     //     console.log(gltf);
+     //     mesh2 = gltf.scene;
+     //     mesh2.children[0].material = new THREE.MeshLambertMaterial();
+     //     scene.add( mesh2 );
+     //     mesh2.position.z = -20;
+     //     // mesh2.position.x = 20;
+     //     mesh2.rotation.y = 9.5;
+     //
+     // }
+        function caesar_load(gltf) {
+           caesarCanvas.style.display = "none";
+           console.log(gltf);
+           mesh3 = gltf.scene;
+           mesh3.children[0].material = new THREE.MeshLambertMaterial();
+           scene3.add( mesh3 );
+           mesh3.position.z = -35;
+           // mesh3.position.x = -20;
+          mesh3.position.y = -5.75;
+           mesh3.rotation.y = -5.75;
+           mesh3.scale.set(.80, .80, .80)
+           console.log(window.innerWidth);
+       }
+
+       function fourth_load(gltf) {
+          tyrionCanvas.style.display = "none"
+          console.log(gltf);
+          mesh4 = gltf.scene;
+          mesh4.children[0].material = new THREE.MeshLambertMaterial();
+          scene2.add( mesh4 );
+          mesh4.position.z = -13;
+          mesh4.position.y = .7;
+          // mesh2.position.x = 20;
+          mesh4.rotation.y = 9.5;
+
+
+       }
+       function guanyin_load(gltf) {
+          guanyinCanvas.style.display = "none"
+          console.log(gltf);
+          mesh5 = gltf.scene;
+          mesh5.children[0].material = new THREE.MeshLambertMaterial();
+          scene4.add( mesh5 );
+          mesh5.position.z = -20;
+          mesh5.position.y = -2.5;
+          mesh5.scale.set(5, 5, 5)
+          // mesh2.position.x = 20;
+          // mesh5.rotation.y = 9.5;
+
+       }
+    //    function loadingScreen() {
+    //                 var y = document.getElementsByClassName("loader");
+    //                 y[0].style.display = "none";
+    //                 console.log("go")
+    //
+    //              }
+    // loadingScreen();
+      function onDocumentMouseMove( event ) {
+
+                   mouseX = ( event.clientX - windowHalfX );
+                   mouseY = ( event.clientY - windowHalfY);
+
+                }
+      var delta = 0;
+      var prevTime = Date.now();
+      var i = 0;
+       // var adiv = document.getElementById('myCanvas');
+       // var leftpos = 0;
+       // requestAnimationFrame(function(timestamp){
+       //     leftpos += 5
+       //     adiv.style.marginLeft = leftpos + 'px';
+       //     console.log(adiv.style.marginLeft)
+       //
+       // }); %>
+   //     var adiv = document.getElementById('myCanvas')
+   //     var leftpos = 0
+   //     function movediv(timestamp){
+   //      leftpos += 5
+   //      adiv.style.marginLeft = leftpos + 'px'
+   //      console.log(adiv.style.marginLeft);
+   //      requestAnimationFrame(movediv); // call requestAnimationFrame again to animate next frame
+   // }
+
+
+     // var centerMargin=($(window).width()/2)-($('#myCanvas').width()/2)+'px';
+     // console.log(centerMargin + "is center");
+
+      // $('#myCanvas').css('margin-left',centerMargin);
+      console.log(document.URL.indexOf("http://localhost:3000/static_pages/home") + " romanpage");
+      console.log(document.URL.indexOf("http://localhost:3000/figures/1") + " tyrionpage");
+
+
+      function changePage(url, bool) {
+
+            // load new content and replace <main> content with the new one
+             // $('main').load(url);
+           if(url != window.location){
+         window.history.pushState({path: url},'',url);
+         // console.log(document.URL.indexOf("http://localhost:3000/static_pages/home") + " romanpage");
+         // console.log(document.URL.indexOf("http://localhost:3000/figures/1") + " tyrionpage");
+
+
+     }
+
+     }
+
+     document.getElementsByClassName("zeroL")[0].addEventListener('click', leftMove, false);
+     document.getElementsByClassName("zeroR")[0].addEventListener('click', rightMove, false);
+     var topbg = document.getElementsByClassName('outer')[0];
+     var uppertopbg = document.getElementsByClassName('uppertop')[0];
+     var midtopbg = document.getElementsByClassName('upperBig')[0];
+     var midlowbg = document.getElementsByClassName('uppermid')[0];
+     var lowbg = document.getElementsByClassName('lowermid')[0];
+
+
+       function rightMove() {
+
+
+         if(document.URL.indexOf(figHome) == 0){
+                 tyrionCanvas.style.left = "140%";
+                 tyrionCanvas.style.display = "block";
+                 $('#tyrionCanvas').animate({left: "50%"},1200);
+                 $('#romanCanvas').animate({left:'-40%'},1200);
+                 var img1 = $("<img />").attr('src', '<%= image_url("tyrion1.jpg")%>')
+                 var img2 = $("<img />").attr('src', '<%= image_url("tyrionside.jpg")%>')
+                 var img3 = $("<img />").attr('src', '<%= image_url("gtv.png")%>')
+                     $.get(fig1, function (data) {
+                   d1 = $(data).find('.uppertoptextshow').html();
+                   d2 = $(data).find('.upperBigTextshow').html();
+                   d3 = $(data).find('.uppertextshow').html();
+                   d4 = $(data).find('.uppercontent').html();
+                   d5 = $(data).find('.textlowshow').html();
+                   $(".uppertoptext").empty().append(d1);
+                   $(".upperBigText").empty().append(d2);
+                   $(".uppertext").empty().append(d3);
+                   $(".upperTopPic1").empty().append(img1);
+                   $(".upperTopPic2").empty().append(img2);
+                      img1.css("width", "35vw");
+                      img1.css("height", "57vh");
+                      img2.css("width", "11vw");
+                      img2.css("height", "40vh");
+                      upcont.style.background = "url(/assets/tyrion2-05da91e0d494af50ad636b86030681fea11ef504c65be4a9e81d0e0d750ac854.jpg)"
+                      upcont.style.backgroundSize = "100vw 100vh"
+                      upcont.style.backgroundPosition = "0 99%"
+                   $(".textlow").empty().append(d5);
+                   $(".lowercontent").empty().append(img3);
+                      img3.css("width", "25vw");
+                      img3.css("height", "100vh");
+                      img3.css("left", "39%");
+                 })
+                   var newPage = fig1
+                   changePage(newPage, true);
+
+
+         } else if(document.URL.indexOf(fig1) == 0){
+             console.log("just happened");
+             romanCanvas.style.display = "none";
+             guanyinCanvas.style.display = "block";
+             guanyinCanvas.style.left = "140%";
+             $('#guanyinCanvas').animate({left: "50%"},1200);
+             $('#tyrionCanvas').animate({left:'-40%'},1200);
+             var img1 = $("<img />").attr('src', '<%= image_url("guanyin1.jpg")%>')
+             var img2 = $("<img />").attr('src', '<%= image_url("guanyin2.jpeg")%>')
+             var img3 = $("<img />").attr('src', '<%= image_url("buddha.png")%>')
+                 $.get(fig3, function (data) {
+               d1 = $(data).find('.uppertoptextshow').html();
+               d2 = $(data).find('.upperBigTextshow').html();
+               d3 = $(data).find('.uppertextshow').html();
+               d4 = $(data).find('.uppercontent').html();
+               d5 = $(data).find('.textlowshow').html();
+               $(".uppertoptext").empty().append(d1);
+               $(".upperBigText").empty().append(d2);
+               $(".uppertext").empty().append(d3);
+               $(".upperTopPic1").empty().append(img1);
+               $(".upperTopPic2").empty().append(img2);
+                  img1.css("width", "25vw");
+                  img1.css("height", "57vh");
+                  img1.css("position", "absolute");
+                  img1.css("left", "-30%");
+                  img2.css("width", "11vw");
+                  img2.css("height", "40vh");
+                  upcont.style.background = "url(/assets/guanyin3-7d59df6b66ac040cf9a47a6e1fc724e8215be8029f4f08b4ba269f0db102c662.jpg)"
+                  upcont.style.backgroundSize = "100vw 100vh"
+                  upcont.style.backgroundPosition = "0 99%"
+               $(".textlow").empty().append(d5);
+               $(".lowercontent").empty().append(img3);
+                  img3.css("width", "25vw");
+                  img3.css("height", "100vh");
+                  img3.css("left", "39%");
+                   })
+             var newPage2 = fig3
+             changePage(newPage2, true);
+         } else if(document.URL.indexOf(fig3) == 0){
+             console.log("just happened");
+             tyrionCanvas.style.display = "none";
+             caesarCanvas.style.display = "block";
+             caesarCanvas.style.left = "140%";
+             $('#caesarCanvas').animate({left: "50%"},1200);
+             $('#guanyinCanvas').animate({left:'-40%'},1200);
+             var img1 = $("<img />").attr('src', '<%= image_url("egypt1.jpg")%>')
+             var img2 = $("<img />").attr('src', '<%= image_url("egypt2.jpeg")%>')
+             var img3 = $("<img />").attr('src', '<%= image_url("egyptian.png")%>')
+                 $.get(fig4, function (data) {
+               d1 = $(data).find('.uppertoptextshow').html();
+               d2 = $(data).find('.upperBigTextshow').html();
+               d3 = $(data).find('.uppertextshow').html();
+               d4 = $(data).find('.uppercontent').html();
+               d5 = $(data).find('.textlowshow').html();
+               $(".uppertoptext").empty().append(d1);
+               $(".upperBigText").empty().append(d2);
+               $(".uppertext").empty().append(d3);
+               $(".upperTopPic1").empty().append(img1);
+               $(".upperTopPic2").empty().append(img2);
+                  img1.css("width", "25vw");
+                  img1.css("height", "57vh");
+                  img1.css("position", "absolute");
+                  img1.css("left", "-30%");
+                  img2.css("width", "11vw");
+                  img2.css("height", "40vh");
+                  upcont.style.background = "url(/assets/egypt3-97937480d898d4eeb5d4ba4707daefa9a076b0e679e793b4565f007ca7ff8fd9.jpg)"
+                  upcont.style.backgroundSize = "100vw 100vh"
+                  upcont.style.backgroundPosition = "0 99%"
+               $(".textlow").empty().append(d5);
+               $(".lowercontent").empty().append(img3);
+                  img3.css("width", "25vw");
+                  img3.css("height", "100vh");
+                  img3.css("left", "39%");
+                   })
+             var newPage3 = fig4
+             changePage(newPage3, true);
+         } else if(document.URL.indexOf(fig4) == 0){
+             console.log("just happened");
+             guanyinCanvas.style.display = "none";
+             romanCanvas.style.display = "block";
+             romanCanvas.style.left = "140%";
+             $('#romanCanvas').animate({left: "50%"},1200);
+             $('#caesarCanvas').animate({left:'-40%'},1200);
+             var img1 = $("<img />").attr('src', '<%= image_url("fountain.jpg")%>')
+             var img2 = $("<img />").attr('src', '<%= image_url("helmet.jpeg")%>')
+             var img3 = $("<img />").attr('src', '<%= image_url("coin.png")%>')
+                 $.get(figHome, function (data) {
+               d1 = $(data).find('.uppertoptext').html();
+               d2 = $(data).find('.upperBigText').html();
+               d3 = $(data).find('.uppertext').html();
+               d4 = $(data).find('.uppercontent').html();
+               d5 = $(data).find('.textlow').html();
+               $(".uppertoptext").empty().append(d1);
+               $(".upperBigText").empty().append(d2);
+               $(".uppertext").empty().append(d3);
+               $(".upperTopPic1").empty().append(img1);
+               $(".upperTopPic2").empty().append(img2);
+                  img1.css("width", "25vw");
+                  img1.css("height", "57vh");
+                  img1.css("position", "absolute");
+                  img1.css("left", "-30%");
+                  img2.css("width", "11vw");
+                  img2.css("height", "40vh");
+                  upcont.style.background = "url(/assets/italy-3fc9d3ef5a46732423d1f431f72cc0ac2531f5b5eb5bae5afc181d51b04bdffd.jpg)"
+                  upcont.style.backgroundSize = "100vw 100vh"
+                  upcont.style.backgroundPosition = "0 99%"
+               $(".textlow").empty().append(d5);
+               $(".lowercontent").empty().append(img3);
+                  img3.css("width", "62vw");
+                  img3.css("height", "85vh");
+                  img3.css("left", "19%");
+                   })
+             var newPage4 = figHome
+             changePage(newPage4, true);
+         }
+            bgColors();
+       }
+       function leftMove() {
+         if(document.URL.indexOf("http://localhost:3000/static_pages/home") == 0){
+                 tyrionCanvas.style.display = "none";
+                 caesarCanvas.style.display = "block";
+                 caesarCanvas.style.left = "-40%"
+                 $('#romanCanvas').animate({left:'140%'},1200);
+                $('#caesarCanvas').animate({left:'50%'},1200);
+                var img1 = $("<img />").attr('src', '<%= image_url("egypt1.jpg")%>')
+                var img2 = $("<img />").attr('src', '<%= image_url("egypt2.jpeg")%>')
+                var img3 = $("<img />").attr('src', '<%= image_url("egyptian.png")%>')
+                    $.get(fig4, function (data) {
+                  d1 = $(data).find('.uppertoptextshow').html();
+                  d2 = $(data).find('.upperBigTextshow').html();
+                  d3 = $(data).find('.uppertextshow').html();
+                  d4 = $(data).find('.uppercontent').html();
+                  d5 = $(data).find('.textlowshow').html();
+                  $(".uppertoptext").empty().append(d1);
+                  $(".upperBigText").empty().append(d2);
+                  $(".uppertext").empty().append(d3);
+                  $(".upperTopPic1").empty().append(img1);
+                  $(".upperTopPic2").empty().append(img2);
+                     img1.css("width", "25vw");
+                     img1.css("height", "57vh");
+                     img1.css("position", "absolute");
+                     img1.css("left", "-30%");
+                     img2.css("width", "11vw");
+                     img2.css("height", "40vh");
+                     upcont.style.background = "url(/assets/egypt3-97937480d898d4eeb5d4ba4707daefa9a076b0e679e793b4565f007ca7ff8fd9.jpg)"
+                     upcont.style.backgroundSize = "100vw 100vh"
+                     upcont.style.backgroundPosition = "0 99%"
+                  $(".textlow").empty().append(d5);
+                  $(".lowercontent").empty().append(img3);
+                     img3.css("width", "25vw");
+                     img3.css("height", "100vh");
+                     img3.css("left", "39%");
+                      })
+                 var rightPage = "http://localhost:3000/figures/4"
+                 changePage(rightPage, true);
+         } else if(document.URL.indexOf("http://localhost:3000/figures/4") == 0){
+                 romanCanvas.style.display = "none";
+                 guanyinCanvas.style.display = "block";
+                 guanyinCanvas.style.left = "-40%";
+                 $('#caesarCanvas').animate({left:'140%'},1200);
+                $('#guanyinCanvas').animate({left:'50%'},1200);
+                var img1 = $("<img />").attr('src', '<%= image_url("guanyin1.jpg")%>')
+                var img2 = $("<img />").attr('src', '<%= image_url("guanyin2.jpeg")%>')
+                var img3 = $("<img />").attr('src', '<%= image_url("buddha.png")%>')
+                    $.get(fig3, function (data) {
+                  d1 = $(data).find('.uppertoptextshow').html();
+                  d2 = $(data).find('.upperBigTextshow').html();
+                  d3 = $(data).find('.uppertextshow').html();
+                  d4 = $(data).find('.uppercontent').html();
+                  d5 = $(data).find('.textlowshow').html();
+                  $(".uppertoptext").empty().append(d1);
+                  $(".upperBigText").empty().append(d2);
+                  $(".uppertext").empty().append(d3);
+                  $(".upperTopPic1").empty().append(img1);
+                  $(".upperTopPic2").empty().append(img2);
+                     img1.css("width", "25vw");
+                     img1.css("height", "57vh");
+                     img1.css("position", "absolute");
+                     img1.css("left", "-30%");
+                     img2.css("width", "11vw");
+                     img2.css("height", "40vh");
+                     upcont.style.background = "url(/assets/guanyin3-7d59df6b66ac040cf9a47a6e1fc724e8215be8029f4f08b4ba269f0db102c662.jpg)"
+                     upcont.style.backgroundSize = "100vw 100vh"
+                     upcont.style.backgroundPosition = "0 99%"
+                  $(".textlow").empty().append(d5);
+                  $(".lowercontent").empty().append(img3);
+                     img3.css("width", "25vw");
+                     img3.css("height", "100vh");
+                     img3.css("left", "39%");
+                      })
+                 var rightPage2 = "http://localhost:3000/figures/3"
+                 changePage(rightPage2, true);
+         } else if(document.URL.indexOf("http://localhost:3000/figures/3") == 0){
+                 caesarCanvas.style.display = "none";
+                 tyrionCanvas.style.display = "block";
+                 tyrionCanvas.style.left = "-40%";
+                 $('#guanyinCanvas').animate({left:'140%'},1200);
+                $('#tyrionCanvas').animate({left:'50%'},1200);
+                var img1 = $("<img />").attr('src', '<%= image_url("tyrion1.jpg")%>')
+                var img2 = $("<img />").attr('src', '<%= image_url("tyrionside.jpg")%>')
+                var img3 = $("<img />").attr('src', '<%= image_url("gtv.png")%>')
+                    $.get(fig1, function (data) {
+                  d1 = $(data).find('.uppertoptextshow').html();
+                  d2 = $(data).find('.upperBigTextshow').html();
+                  d3 = $(data).find('.uppertextshow').html();
+                  d4 = $(data).find('.uppercontent').html();
+                  d5 = $(data).find('.textlowshow').html();
+                  $(".uppertoptext").empty().append(d1);
+                  $(".upperBigText").empty().append(d2);
+                  $(".uppertext").empty().append(d3);
+                  $(".upperTopPic1").empty().append(img1);
+                  $(".upperTopPic2").empty().append(img2);
+                     img1.css("width", "35vw");
+                     img1.css("height", "57vh");
+                     img2.css("width", "11vw");
+                     img2.css("height", "40vh");
+                     upcont.style.background = "url(/assets/tyrion2-05da91e0d494af50ad636b86030681fea11ef504c65be4a9e81d0e0d750ac854.jpg)"
+                     upcont.style.backgroundSize = "100vw 100vh"
+                     upcont.style.backgroundPosition = "0 99%"
+                  $(".textlow").empty().append(d5);
+                  $(".lowercontent").empty().append(img3);
+                     img3.css("width", "25vw");
+                     img3.css("height", "100vh");
+                     img3.css("left", "39%");
+                })
+                 var rightPage3 = "http://localhost:3000/figures/1"
+                 changePage(rightPage3, true);
+         } else if(document.URL.indexOf("http://localhost:3000/figures/1") == 0){
+                 guanyinCanvas.style.display = "none";
+                 romanCanvas.style.display = "block";
+                 romanCanvas.style.left = "-40%";
+                 $('#tyrionCanvas').animate({left:'140%'},1200);
+                $('#romanCanvas').animate({left:'50%'},1200);
+                var img1 = $("<img />").attr('src', '<%= image_url("fountain.jpg")%>')
+                var img2 = $("<img />").attr('src', '<%= image_url("helmet.jpeg")%>')
+                var img3 = $("<img />").attr('src', '<%= image_url("coin.png")%>')
+                    $.get(figHome, function (data) {
+                  d1 = $(data).find('.uppertoptext').html();
+                  d2 = $(data).find('.upperBigText').html();
+                  d3 = $(data).find('.uppertext').html();
+                  d4 = $(data).find('.uppercontent').html();
+                  d5 = $(data).find('.textlow').html();
+                  $(".uppertoptext").empty().append(d1);
+                  $(".upperBigText").empty().append(d2);
+                  $(".uppertext").empty().append(d3);
+                  $(".upperTopPic1").empty().append(img1);
+                  $(".upperTopPic2").empty().append(img2);
+                     img1.css("width", "25vw");
+                     img1.css("height", "57vh");
+                     img1.css("position", "absolute");
+                     img1.css("left", "-30%");
+                     img2.css("width", "11vw");
+                     img2.css("height", "40vh");
+                     upcont.style.background = "url(/assets/italy-3fc9d3ef5a46732423d1f431f72cc0ac2531f5b5eb5bae5afc181d51b04bdffd.jpg)"
+                     upcont.style.backgroundSize = "100vw 100vh"
+                     upcont.style.backgroundPosition = "0 99%"
+                  $(".textlow").empty().append(d5);
+                  $(".lowercontent").empty().append(img3);
+                     img3.css("width", "62vw");
+                     img3.css("height", "85vh");
+                     img3.css("left", "19%");
+                      })
+                 var rightPage4 = "http://localhost:3000/static_pages/home"
+                 changePage(rightPage4, true);
+          }
+               bgColors();
+       }
+//      window.onpopstate = function(e){
+//      if(e.state){
+//         document.getElementById("main").innerHTML = e.state.html;
+//         document.title = e.state.pageTitle;
+//     }
+// }
+
+
+
+
+
+   window.addEventListener( 'resize', onWindowResize, false );
+      function onWindowResize() {
+    				// camera.aspect =  window.innerHeight;
+    				// camera.updateProjectionMatrix();
+           centerMargin=(window.innerWidth /2)-($('#romanCanvas').width()/2)+'px';
+           otherMargin=($(window).width()/2)-($('#romanCanvas').width()/2)+'px';
+           romanCanvas.style.marginLeft = centerMargin;
+           console.log(centerMargin);
+           console.log(otherMargin);
+    			}
+
+   // function moveit(timestamp, el, dist, duration){
+   //     //if browser doesn't support requestAnimationFrame, generate our own timestamp using Date:
+   //     // var timestamp = timestamp || new Date().getTime()
+   //     // var runtime = timestamp - starttime
+   //     // var progress = runtime / duration
+   //     // progress = Math.min(progress, 1)
+   //     // el.style.left = (dist * progress).toFixed(2) + 'px'
+   //     el =
+   //
+   //     can.style.marginLeft = el + 'px';
+   //     if (el.style.marginLeft > 0) { // if duration not met yet
+   //       el.style.marginLeft =
+   //         requestAnimationFrame(function(timestamp){ // call requestAnimationFrame again with parameters
+   //             // moveit(timestamp, el, dist, duration)
+   //         })
+   //     }
+   // }
+
+   // requestAnimationFrame(function(timestamp){
+   //     starttime = timestamp || new Date().getTime() //if browser doesn't support requestAnimationFrame, generate our own timestamp using Date
+   //     moveit(timestamp, adiv, 400, 2000) // 400px over 1 second
+   // })
+
+      //
+      //     }
+      render();
+      function render() {
+
+
+
+
+         targetX = mouseX * 0.001;
+         targetY = mouseY *  0.001;
+        if ( mesh && mesh5) {
+
+          mesh.rotation.y += 0.05 * ( targetX - mesh.rotation.y );
+          mesh.rotation.x += 0.05 * ( targetY - mesh.rotation.x );
+          mesh3.rotation.y += 0.05 * ( targetX - mesh.rotation.y );
+          mesh3.rotation.x += 0.05 * ( targetY - mesh.rotation.x );
+          mesh4.rotation.y += 0.05 * ( targetX - mesh.rotation.y );
+          mesh4.rotation.x += 0.05 * ( targetY - mesh.rotation.x );
+          mesh5.rotation.y += 0.05 * ( targetX - mesh.rotation.y );
+          mesh5.rotation.x += 0.05 * ( targetY - mesh.rotation.x );
+         }
+
+
+
+
+
+      renderer.render(scene, camera);
+
+
+
+
+      renderer2.render(scene2, camera2);
+      renderer3.render(scene3, camera3);
+      renderer4.render(scene4, camera3);
+
+      requestAnimationFrame(render);
+
+      //
+      //   // var box = new THREE.Box3().setFromObject( mesh3 );
+      //   // console.log( box.getSize() );
+      //
+      }
+      i = 0;
+
+
+
+
+
+
+      // $('#info').on('click', '[data-type="page-transition"]', function(event){
+      //    event.preventDefault();
+      //    console.log("its clicked");
+      //    //detect which page has been selected
+      //    var newPage = $(this).attr('href');
+      //
+      //    //if the page is not animating - trigger animation
+      //    if( !isAnimating ) changePage(newPage, true);
+      // });
+      //
+      // document.getElementsByClassName("arrow left")[0].addEventListener("click", mainLoop2, false);
+      //    document.getElementsByClassName("arrow right")[0].addEventListener("click", transitional, false);
+      //       document.getElementsByClassName("arrow right")[0].addEventListener("click", mainLoop, false);
+      //
+      // console.log(document.innerWidth);
+
+     //  function sliderAni() {
+     //
+     //
+     //   var id = requestAnimationFrame(frame, 10);
+     //   function frame() {
+     //
+     //   }
+     // }
+
+
+
+     // function sweep(timestamp) {
+     //   console.log(timestamp + "is the stap");
+     //   var start = null;
+     //   var element = document.getElementById('myCanvas');
+     //   element.style.position = 'absolute';
+     //
+     //   if (!start) start = timestamp;
+     //   var progress = timestamp - start;
+     //   element.style.left = Math.min(progress / 5, 200) + 'px';
+     //
+     //   if (progress < 1000) {
+     //    requestAnimationFrame(sweep);
+     //  }
+     // }
+     //   requestAnimationFrame(sweep);
+
+
+     function mainLoop(time){  // time in ms accurate to 1 micro second 1/1,000,000th second
+
+       var pos = mesh2.position.x;
+   //
+   //
+       if (pos <= 0) {
+       styleAfter();
+       return false;
+
+       } else {
+         pos -= 1;
+         mesh2.position.x = pos;
+         mesh.position.x = pos - 20;
+         mesh3.position.x = pos - 40;
+
+
+
+       }
+      requestAnimationFrame(mainLoop);
+
+   }
+   requestAnimationFrame(mainLoop(15000));
+
+
+      function transitional() {
+
+          $.ajax({url: "help", success: function(result){
+            $("#newcanvas").html(result);
+
+
+          }});
+      }
+      function styleAfter() {
+        var st = document.getElementById("somet");
+        var x = document.getElementById("newcanvas");
+        x.style.display = "block";
+        st.style.display = "none";
+      }
+   //
+
+
+
+
+   //   var elem = mesh2,
+   //     left = 0,
+   //     lastFrame = +new Date,
+   //     timer;
+   //   function animLoop( render, element ) {
+   //     var left = 30;
+   //     var running, lastFrame = +new Date;
+   //     function loop( now ) {
+   //         // stop the loop if render returned false
+   //         if ( running !== false ) {
+   //             requestAnimationFrame( loop, element );
+   //             running = render( now - lastFrame );
+   //             lastFrame = now;
+   //         }
+   //     }
+   //     loop( lastFrame );
+   // }
+   //
+   // animLoop(function( deltaT ) {
+   //     elem.style.left = ( left += 10 * deltaT / 16 ) + "px";
+   //     if ( left <= 0 ) {
+   //       return false;
+   //     }
+   //
+   // }, animWrapper );
+    //   function sliderAni() {
+    //        var num = mesh2.position.x - smallWindow
+    //        console.log(smallWindow)
+    //       for(i=0; i > (-50); i -= .001) {  // just console.log(mesh2.position.x) like below and set i > (-10) to the necessary number
+    //
+    //       (function(i) {
+    //        setTimeout(function() {
+    //         mesh.position.x = i;
+    //          mesh2.position.x = i + 50;
+    //          mesh3.position.x = (i - 10) ;
+    //         console.log(mesh2.position.x)
+    //      }, (50) * i); // <-- You need to multiply by i here.
+    //       })(i);
+    //
+    //   }
+    // }
+
+    function mainLoop2(time){  // time in ms accurate to 1 micro second 1/1,000,000th second
+      var pos2 = mesh3.position.x;
+      // console.log(pos2 + " is pos")
+      // console.log(mesh.position.x + " first")
+      // console.log(mesh2.position.x + " 2nd")
+      if (pos2 >= 0) {
+        return false;
+      } else {
+        pos2 ++;
+       mesh3.position.x = pos2;
+       mesh.position.x = pos2 + 20;
+       mesh2.position.x = pos2 + 40;
+      }
+     requestAnimationFrame(mainLoop2);
+
+   }
+   requestAnimationFrame(mainLoop2(15000));
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+}
+ </script>

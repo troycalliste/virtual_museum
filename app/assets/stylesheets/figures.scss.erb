@@ -1,0 +1,589 @@
+// Place all the styles related to the figures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	margin: 0;
+	background: #efefbb; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #efefbb, #d4d3dd); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #efefbb, #d4d3dd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	color: #fff;
+	font-family: Monospace;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.outerShow {
+ background-image: linear-gradient(#FCF7F7, #DCDADA);
+ width: 100vw;
+ height: 100vh;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+
+}
+
+.myBtn {
+	margin: auto;
+}
+//
+// a {
+// 	color: #ff0;
+// 	text-decoration: none;
+// }
+//
+// a:hover {
+// 	text-decoration: underline;
+// }
+//
+// button {
+// 	cursor: pointer;
+// 	text-transform: uppercase;
+// }
+
+//
+#info {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	z-index: 1; /* TODO Solve this in HTML */
+}
+//
+// .dg.ac {
+// 	z-index: 2 !important; /* TODO Solve this in HTML */
+// }
+
+
+
+#loading {
+	margin: auto;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 400px;
+  height: 400px;
+	margin-top: 10%;
+
+  background-image: url("https://i.imgur.com/gwQOiTQ.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+// Variables
+$bar-color: #fff;
+$ball-color: #fff;
+$bg-color: black;
+
+html {
+  height: 100%;
+}
+// body {
+//   height: 100%;
+//   background: $bg-color;
+//   display: flex;
+//
+// }
+.screen {
+
+	  width: 100px;
+		height: 100px;
+		// background-color: red;
+
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		margin: 15% 47%;
+
+
+}
+
+
+.uppertoptextshow {
+
+	position: absolute;
+	font-size: 20px;
+	left: 19%;
+	top: 44%;
+	width: 28vw;
+	height: 57vh;
+	text-align: left;
+}
+
+
+
+
+
+.uppertopshow {
+ width: 100vw;
+ height: 140vh;
+
+ text-align: center;
+ position: absolute;
+ top: 100%;
+ left: 0%;
+}
+.upperTopPic1show {
+ // background: image_url("italy.jpg");
+
+ position: absolute;
+ left: 55%;
+ top: 50%;
+ width: 15vw;
+ height: 57vh;
+ overflow: hidden;
+}
+.upperTopPic1show img{
+ width: 35vw;
+ height: 57vh;
+}
+
+.upperTopPic2show {
+	position: absolute;
+	left: 70%;
+	top: 24%;
+	width: 11vw;
+	height: 40vh;
+	overflow: hidden;
+}
+.upperTopPic2show img{
+ width: 11vw;
+ height: 40vh;
+}
+
+
+
+.upperBigShow {
+  top: 240%;
+  height: 90vh;
+  width: 100vw;
+
+  position: absolute;
+}
+.upperBigShow span {
+  width: 70vw;
+  height: 20vh;
+  line-height: 110%;
+  font-size: 42px;
+  font-weight: 700;
+  color: red;
+  float: right;
+  position: absolute;
+  left: 28%;
+  bottom: 30%;
+
+}
+
+
+
+.uppermidshow {
+	width: 100vw;
+	height: 160vh;
+
+ text-align: center;
+ // background-image: linear-gradient(#E0DAA5, #A6A386);
+
+ position: absolute;
+ top: 330%; // top: 290%;
+ left: 0%;
+ // clip: rect(119px, 255px, 229px, 80px);
+}
+
+
+.transitionshow{
+  width: 100vw;
+  height:100vh;
+
+  position: fixed;
+  left: 0%;
+  bottom: 0%;
+
+  clip: rect(0 100vw 100vh 0);
+  transition: all .4s ease-in;
+
+ }
+
+
+.ucsfirst {
+ width: 10vw;
+ height: 39vh;
+ color: white;
+ overflow:hidden;
+ position: absolute;
+ right: 65%;
+ top: 20%;
+
+ display: block;
+
+ }
+.uppercontentshow {
+width: 100vw;
+height: 150vh;
+-webkit-transition: clip 0.5s ease-out;
+transition: all 0.5s ease-out;
+position: absolute;
+left: 0%;
+clip:rect(93vh 47vw 131vh 35vw); //top right bottom left
+top: -20%;
+
+
+
+}
+.uppermidlastshow {
+	width: 100vw;
+	height: 100vh;
+
+	font-size: 50px;
+	// clip: rect(500px, 100%, 100%, 500px);
+
+	color: white;
+	overflow:hidden;
+	// transition:  position 1s, height 0.4s, width 0.6s;
+	// -webkit-transition: clip 0.5s ease-out;
+	// transition: all 0.5s ease-out;
+	// -webkit-transform:translateZ(0);
+	// transform:translateZ(0);
+	position: absolute;
+	left: 0%;
+	clip:rect(0vh 100vw 100vh 0vw); //top right bottom left
+	top: 34%;
+	// bottom: 0%;
+	// display: block;
+}
+
+
+.uppertextshow {
+
+	width: 32vw;
+	height: 40vh;
+	float: right;
+	left: 55%;
+	top: 32%;
+	text-align: left;
+	 font-size: 130%;
+	 position: absolute;
+}
+
+
+
+.lowermidshow {
+	width: 100vw;
+	height: 130vh;
+
+ text-align: center;
+
+ position: absolute;
+ top: 490%;// top: 440%;
+ left: 0%;
+}
+.lowercontentshow img {
+	filter: blur(7px);
+	top: 20%;
+	left: 35%;
+	position: absolute;
+	height: 70vh;
+}
+.lowercontent button{
+//   border: none;
+// display: block;
+// width: 40px;
+// height: 40px;
+// cursor: pointer;
+// text-indent: -9999em;
+// background-color: transparent;
+// background-repeat: no-repeat;
+}
+.textlowshow{
+  width: 70vw;
+  height: 20vh;
+  line-height: 110%;
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+  text-align: left;
+  position: absolute;
+  left: 8%;
+  top: 50%;
+}
+
+.lowerlink {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  background: red;
+}
+// .nextbtn i {
+//   font-size: 20px;
+//   width: 20px;
+//   height: 20px;
+//   color: white;
+//
+// }
+
+
+
+#myBtn {
+
+
+		// background-color: red;
+
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		margin: 15% 47%;
+
+
+}
+.loading {
+	padding-left: 0px;
+	position:absolute;
+	top: 110px;
+}
+
+.loader {
+
+	right: 0;
+
+
+
+
+
+  &__bar {
+
+    position: absolute;
+    bottom: 0;
+
+    width: 10px;
+    height: 50%;
+    background: $bar-color;
+    transform-origin: center bottom;
+    box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+
+
+    @for $i from 1 through 5 {
+       &:nth-child(#{$i}) {
+         left: ($i - 1) * 15px;
+         transform: scale(1,$i*.2);
+         animation: barUp#{$i} 4s infinite;
+
+        }
+    }
+
+  }
+
+  &__ball {
+    position: absolute;
+    bottom: 10px;
+
+    width: 10px;
+    height: 10px;
+    background: $ball-color;
+    border-radius: 50%;
+    animation: ball 4s infinite;
+
+  }
+}
+
+@keyframes ball {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(8px, -14px);
+  }
+  10% {
+    transform: translate(15px, -10px)
+  }
+  17% {
+    transform: translate(23px, -24px)
+  }
+  20% {
+    transform: translate(30px, -20px)
+  }
+  27% {
+    transform: translate(38px, -34px)
+  }
+  30% {
+    transform: translate(45px, -30px)
+  }
+  37% {
+    transform: translate(53px, -44px)
+  }
+  40% {
+    transform: translate(60px, -40px)
+  }
+  50% {
+    transform: translate(60px, 0)
+  }
+  57% {
+    transform: translate(53px, -14px)
+  }
+  60% {
+    transform: translate(45px, -10px)
+  }
+  67% {
+    transform: translate(37px, -24px)
+  }
+  70% {
+    transform: translate(30px, -20px)
+  }
+  77% {
+    transform: translate(22px, -34px)
+  }
+  80% {
+    transform: translate(15px, -30px)
+  }
+  87% {
+    transform: translate(7px, -44px)
+  }
+  90% {
+    transform: translate(0, -40px)
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes barUp1 {
+  0% {
+    transform: scale(1, .2);
+  }
+  40%{
+    transform: scale(1, .2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  90% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(1,.2);
+  }
+}
+@keyframes barUp2 {
+  0% {
+    transform: scale(1, .4);
+  }
+  40% {
+    transform: scale(1, .4);
+  }
+  50% {
+    transform: scale(1, .8);
+  }
+  90% {
+    transform: scale(1, .8);
+  }
+  100% {
+    transform: scale(1, .4);
+  }
+}
+@keyframes barUp3 {
+  0% {
+    transform: scale(1, .6);
+  }
+  100% {
+    transform: scale(1, .6);
+  }
+}
+@keyframes barUp4 {
+  0% {
+    transform: scale(1, .8);
+  }
+  40% {
+    transform: scale(1, .8);
+  }
+  50% {
+    transform: scale(1, .4);
+  }
+  90% {
+    transform: scale(1, .4);
+  }
+  100% {
+    transform: scale(1, .8);
+  }
+}
+@keyframes barUp5 {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, .2);
+  }
+  90% {
+    transform: scale(1, .2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+
+////////////////////////////////////////////
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline:0;
+}
+
+svg {
+  padding: 5px;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  margin-left: -35px;
+  width: 70px;
+  height: 90px;
+}
+
+.left {
+  left: 25%;
+}
+
+.right {
+  left: 75%;
+}
+
+.left:hover polyline {
+  stroke-width: 3;
+}
+
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
